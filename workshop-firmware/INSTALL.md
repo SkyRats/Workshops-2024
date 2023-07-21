@@ -106,3 +106,11 @@ In another terminal, go to the `ardupilot/ArduCopter` directory and run the SITL
 ```
 sim_vehicle.py 
 ```
+
+
+## Install Dronkekit
+
+In a terminal enter:
+```
+pip3 install dronekit
+```
