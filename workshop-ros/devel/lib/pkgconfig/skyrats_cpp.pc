@@ -1,0 +1,8 @@
+prefix=/home/helena/workshop_ws/devel
+
+Name: skyrats_cpp
+Description: Description of skyrats_cpp
+Version: 0.0.0
+Cflags: -I/home/helena/workshop_ws/src/skyrats_cpp/include
+Libs: -L${prefix}/lib -lskyrats_cpp
+Requires: geometry_msgs roscpp

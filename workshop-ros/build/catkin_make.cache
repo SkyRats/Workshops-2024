@@ -1,0 +1,2 @@
+skyrats_cpp
+-DCATKIN_DEVEL_PREFIX=/home/helena/workshop_ws/devel -DCMAKE_INSTALL_PREFIX=/home/helena/workshop_ws/install -G Unix Makefiles
