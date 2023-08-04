@@ -1,0 +1,7 @@
+
+   <launch>
+       
+    <node pkg="ep_py" type="talker.py" name=""/>
+    <node pkg="ep_py" type="listener.py" name=""/>
+    
+  </launch>
