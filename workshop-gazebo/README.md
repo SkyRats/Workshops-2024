@@ -138,24 +138,26 @@ Assuming we're modifying the `iris_base` model, let's add collision and sensor e
   <collision name="drone_collision">
     <geometry>
       <box>
-        <size>0.4 0.4 0.4</size>
+        <size>0.4 0.4 0.4</size> <!-- Specifies the size of the collision box -->
       </box>
     </geometry>
   </collision>
 
   <!-- Adding sensor -->
 
-  <sensor name='my_contact' type='contact'>
+  <sensor name='my_contact' type='contact'> <!-- Defines a contact sensor -->
     <contact>
-      <collision>drone_collision</collision>
+      <collision>drone_collision</collision> <!-- Specifies the collision the sensor is attached to -->
     </contact> 
-    <plugin name="drone_gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so">
-      <alwaysOn>true</alwaysOn>
-      <updateRate>${update_rate}</updateRate>
-      <bumperTopicName>drone_bumper</bumperTopicName>
-      <frameName>world</frameName>
+    <plugin name="drone_gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so"> <!-- Adds a plugin to the sensor -->
+      <alwaysOn>true</alwaysOn> <!-- Specifies if the plugin is always active -->
+      <updateRate>${update_rate}</updateRate> <!-- Specifies the update rate of the plugin -->
+      <bumperTopicName>drone_bumper</bumperTopicName> <!-- Specifies the topic name for bumper data -->
+      <frameName>world</frameName> <!-- Specifies the frame name for the plugin -->
     </plugin>
   </sensor>
 
 </model>
+
 ```
+
