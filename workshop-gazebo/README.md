@@ -103,7 +103,7 @@ For example, let's include a custom model called `palm_tree`:
     <!-- In this case, it imports the 'palm_tree' model from the 'model://palm_tree' path -->
   </include>
   
-  <pose>10 10 0 0 0 0</pose>
+  <pose>5 5 0 0 0 0</pose>
   <!-- Set the position and orientation of the model -->
   <!-- This places the model at coordinates (10, 10, 0) with no rotation -->
   
