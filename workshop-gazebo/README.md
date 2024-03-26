@@ -4,7 +4,7 @@ In the sky, we use Gazebo as our simulator. There, we can employ different plugi
 
 ## Directory Organization
 
-Gazebo organizes its files into directories such as `launch`, `models`, and `worlds`. These directories play crucial roles in managing simulation environments and customizations.
+Gazebo organizes its files into directories such as `launch`, `models`, and `worlds`. These directories play crucial roles in managing simulation environments and customizations. All of these directories are in our simulation submodule `sky_sim`.
 
 ### Launch Directory
 
