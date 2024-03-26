@@ -12,7 +12,7 @@ The `launch` directory contains launch files (.launch) that specify how to start
 
 ### Models Directory
 
-The `models` directory stores files describing objects, robots, or any other entities that can be placed in the simulation environment. These models are often reused across different simulations.
+The `models` directory stores files describing objects, robots, or any other entities that can be placed in the simulation environment. These models are often reused across different simulations. You can add yout own models (done in Blender for example).
 
 ### Worlds Directory
 
