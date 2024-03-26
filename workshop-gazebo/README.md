@@ -160,4 +160,6 @@ Assuming we're modifying the `iris_base` model, let's add collision and sensor e
 </model>
 
 ```
+Now if we re-launch our simulation, we can monitor the ROS topic `/drone_bumper` using `rostopic echo /drone_bumper` and see if the drone touches any object. If you run the command while the drone is on the ground, you will se that the sensor detects the collision between the ground and the drone. When it takeoffs, there is no collision. How about trying to collide with our palm tree? Try doing a python code that moves the drone towards the tree using MAVROS.
+
 
