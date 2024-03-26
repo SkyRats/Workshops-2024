@@ -128,7 +128,7 @@ First, let's assume we want to use the bumper plugin. You can find the relevant 
 
 ### Modifying the Iris Base Copter Model
 
-Assuming we're modifying the `iris_base` model, let's add collision and sensor elements, as well as the plugin configuration:
+Assuming we're modifying the `iris_base` model, let's add collision and sensor elements, as well as the plugin configuration. Edit the `model.sdf` file from the `iris_base` directory in `models` directory :
 
 ```xml
 <model name="iris_base">
