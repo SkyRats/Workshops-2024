@@ -1,6 +1,6 @@
 # Using Gazebo for Simulation
 
-In the sky, we use Gazebo as our simulator. There, we can employ different plugins to simulate sensors, cameras, and effectively construct our competition scenarios, for example. 
+In Skyrats, we use Gazebo as our simulator. There, we can employ different plugins to simulate sensors, cameras, and effectively construct our competition scenarios, for example. We will use sky_sim repository for this tutorial. All of the .world files created should be in the worlds directory, same for the .launch files and models. Firstly, **follow the instructions in sky_ws**, to have all the required setup.
 
 ## Directory Organization
 
