@@ -28,7 +28,7 @@ Users can modify existing world files or create new ones to tailor the simulatio
 
 For example, let's include a custom model called `palm_tree`:
 
-```
+```xml
 <model name="palm_tree">
   <!-- Define the start of a new model with the name 'palm_tree' -->
   
