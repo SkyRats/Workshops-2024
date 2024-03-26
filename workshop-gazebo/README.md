@@ -26,6 +26,31 @@ SDF (Simulation Description Format) files are used to describe models, worlds, a
 
 Users can modify existing world files or create new ones to tailor the simulation environment to their specific needs. Custom models can be included by adding their descriptions to the world file and ensuring their corresponding files are present in the `models` directory.
 
+For example, let's include a custom model called `palm_tree`:
+
+<model name="palm_tree">
+  <!-- Define the start of a new model with the name 'palm_tree' -->
+  
+  <include>
+    <!-- Include another model from a URI -->
+    
+    <uri>model://palm_tree</uri>
+    <!-- Specify the URI of the model to include -->
+    <!-- In this case, it imports the 'palm_tree' model from the 'model://palm_tree' path -->
+  </include>
+  
+  <pose>10 10 0 0 0 0</pose>
+  <!-- Set the position and orientation of the model -->
+  <!-- This places the model at coordinates (10, 10, 0) with no rotation -->
+  
+  <static>true</static>
+  <!-- Specify that the model is static and won't move during simulation -->
+  
+  <turnGravityOff>true</turnGravityOff>
+  <!-- Indicate that gravity effects are turned off for this model -->
+</model>
+
+
 ## Creating Custom Launch Files
 
 Custom launch files can be created to automate and configure Gazebo simulations according to specific requirements. These files specify which world to load, what models to include, and any additional parameters necessary for the simulation setup.
