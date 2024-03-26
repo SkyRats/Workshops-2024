@@ -1,4 +1,4 @@
-\## Creating a Workspace
+## Creating a Workspace
 
 At Sky, we have our own workspace, and therefore, this part of the workshop is important to keep a functional and organized working environment.
 
