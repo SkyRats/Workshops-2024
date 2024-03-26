@@ -116,7 +116,7 @@ For example, let's include a custom model called `palm_tree`:
 ```
 Now if we run in a terminal `roslaunch sky_sim sky_sim.launch`, we will see our new world:
 
-<figure><img src="assets/gazebo.png" alt="" width="563"><figcaption><p><em>Drone and our new palm tree from the gazebo_vegetation package</em></p></figcaption></figure>
+<p align="center"><img src="assets/gazebo.png" alt="" width="563"></p>
 
 ## Using a Plugin in Gazebo
 
@@ -164,4 +164,5 @@ Now, if we relaunch our simulation, we can monitor the ROS topic /drone_bumper u
 
 How about trying to collide with our palm tree? Try writing a Python code that moves the drone towards the tree using MAVROS.
 
+<p align="center"><img src="assets/collision.png" alt="" width="563"></p>
 
