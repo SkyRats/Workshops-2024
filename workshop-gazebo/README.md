@@ -73,7 +73,7 @@ So let's include our mavros node:
     <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
     <arg name="gui" default="true"/>
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find sky_sim)/worlds/sky_sim.world"/>
+        <arg name="world_name" value="$(find sky_sim)/worlds/my_world.world"/>
         <arg name="gui" value="$(arg gui)"/>
         <!-- more default parameters can be changed here -->
     </include>
