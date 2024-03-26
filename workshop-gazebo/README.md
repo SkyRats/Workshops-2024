@@ -28,6 +28,7 @@ Users can modify existing world files or create new ones to tailor the simulatio
 
 For example, let's include a custom model called `palm_tree`:
 
+```
 <model name="palm_tree">
   <!-- Define the start of a new model with the name 'palm_tree' -->
   
@@ -49,7 +50,7 @@ For example, let's include a custom model called `palm_tree`:
   <turnGravityOff>true</turnGravityOff>
   <!-- Indicate that gravity effects are turned off for this model -->
 </model>
-
+```
 
 ## Creating Custom Launch Files
 
