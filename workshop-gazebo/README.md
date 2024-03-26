@@ -18,6 +18,26 @@ The `models` directory stores files describing objects, robots, or any other ent
 
 The `worlds` directory holds world files (.world) that define the environment in which simulations take place. It includes terrain, objects, lighting, and other elements necessary for creating realistic scenarios.
 
+## Creating Custom Launch Files
+
+Custom launch files can be created to automate and configure Gazebo simulations according to specific requirements. These files specify which world to load, what models to include, and any additional parameters necessary for the simulation setup.
+
+To do an example, here is a launch file from a world in sky_sim:
+
+```launch
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <arg name="gui" default="true"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find sky_sim)/worlds/sky_sim.world"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+</launch>
+```
+Here, we only launch our world, but usually we launch MAVROS node with our world, instead of running in two separate terminals the 
+`apm.launch` and the `my_world.launch` files.
+
 ## SDF Files
 
 SDF (Simulation Description Format) files are used to describe models, worlds, and other elements in Gazebo simulations. They contain XML-based markup specifying the properties, geometry, and behavior of entities within the simulation.
