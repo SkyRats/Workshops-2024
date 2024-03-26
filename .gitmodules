@@ -1,0 +1,3 @@
+[submodule "workshop-gazebo/gazebo-vegetation"]
+	path = workshop-gazebo/gazebo-vegetation
+	url = https://github.com/kubja/gazebo-vegetation.git
