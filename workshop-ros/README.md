@@ -1,2 +1,4 @@
-# Como utilizar esse workspace?
-Opte por não clonar. Em vez disso, construa você mesmo seu workspace, compare os arquivos que precisam de mudança (CMake, por exemplo). Faça seus scripts seguindo os exemplos daqui e dễ build no seu workspace.
+# How to Use This Workspace?
+
+Opt not to clone. Instead, build your workspace yourself. Compare the files that need changes (such as CMake). Write your scripts following the examples provided here and easily build them in your workspace.
+
