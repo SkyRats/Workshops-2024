@@ -83,7 +83,7 @@ This is a standard launch file for our purposes here in Skyrats.
 
 ## SDF Files
 
-SDF (Simulation Description Format) files are used to describe models, worlds, and other elements in Gazebo simulations. They contain XML-based markup specifying the properties, geometry, and behavior of entities within the simulation.
+SDF (Simulation Description Format) files are used to describe models, worlds, and other elements in Gazebo simulations. They contain XML-based markup specifying the properties, geometry, and behavior of entities within the simulation. Navigate through the SDF files in the Models directory to see examples.
 
 ## Modifying Worlds and Including Custom Models
 
