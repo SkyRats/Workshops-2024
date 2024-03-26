@@ -31,7 +31,7 @@ To do an example, here is a launch file from a world in sky_sim:
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <arg name="gui" default="true"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find sky_sim)/worlds/sky_sim.world"/>
+    <arg name="world_name" value="$(find sky_sim)/worlds/my_world.world"/>
     <arg name="gui" value="$(arg gui)"/>
     <!-- more default parameters can be changed here -->
   </include>
@@ -79,7 +79,7 @@ So let's include our mavros node:
     </include>
 </launch>
 ```
-This is a standard launch file for our purposes here in Skyrats.
+This is a standard launch file for our purposes here in Skyrats. Save this launch file as `my_world.launch`.
 
 ## SDF Files
 
@@ -118,8 +118,3 @@ Now if we run in a terminal `roslaunch sky_sim sky_sim.launch`, we will see our 
 
 <figure><img src="assets/gazebo.png" alt="" width="563"><figcaption><p><em>Drone and our new palm tree from the gazebo_vegetation package</em></p></figcaption></figure>
 
-## Creating Custom Launch Files
-
-Custom launch files can be created to automate and configure Gazebo simulations according to specific requirements. These files specify which world to load, what models to include, and any additional parameters necessary for the simulation setup.
-
-By understanding the organization of directories, the structure of SDF files, and how to create custom launch files, users can effectively customize and control Gazebo simulations to meet their simulation needs.
