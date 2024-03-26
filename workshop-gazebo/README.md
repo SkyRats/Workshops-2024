@@ -164,5 +164,5 @@ Now, if we relaunch our simulation, we can monitor the ROS topic /drone_bumper u
 
 How about trying to collide with our palm tree? Try writing a Python code that moves the drone towards the tree using MAVROS.
 
-<p align="center"><img src="assets/collision.png" alt="" width="700"></p>
+<p align="center"><img src="assets/collision.png" alt="" width="1000"></p>
 
