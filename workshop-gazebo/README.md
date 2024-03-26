@@ -38,6 +38,47 @@ To do an example, here is a launch file from a world in sky_sim:
 Here, we only launch our world, but usually we launch MAVROS node with our world, instead of running in two separate terminals the 
 `apm.launch` and the `my_world.launch` files.
 
+So let's include our mavros node:
+
+```launch
+<launch>
+    <!-- vim: set ft=xml noet : -->
+    <!-- base node launch file-->
+    <arg name="fcu_url" default="udp://127.0.0.1:14550@"/>
+    <arg name="gcs_url" default="" />
+    <arg name="mavros_ns" default="/" />
+    <arg name="tgt_system" default="1" />
+    <arg name="tgt_component" default="1" />
+    <arg name="pluginlists_yaml" value="$(find mavros)/launch/apm_pluginlists.yaml" />
+    <arg name="config_yaml" default="$(find mavros)/launch/apm_config.yaml" />
+
+    <arg name="log_output" default="screen" />
+    <arg name="fcu_protocol" default="v2.0" />
+    <arg name="respawn_mavros" default="false" />
+
+    <node pkg="mavros" type="mavros_node" name="mavros" required="$(eval not respawn_mavros)" clear_params="true" output="$(arg log_output)" respawn="$(arg respawn_mavros)" ns="$(arg mavros_ns)">
+        <param name="fcu_url" value="$(arg fcu_url)" />
+        <param name="gcs_url" value="$(arg gcs_url)" />
+        <param name="target_system_id" value="$(arg tgt_system)" />
+        <param name="target_component_id" value="$(arg tgt_component)" />
+        <param name="fcu_protocol" value="$(arg fcu_protocol)" />
+
+        <!-- load blacklist, config -->
+        <rosparam command="load" file="$(arg pluginlists_yaml)" />
+        <rosparam command="load" file="$(arg config_yaml)" />
+    </node>
+
+    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+    <arg name="gui" default="true"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find sky_sim)/worlds/sky_sim.world"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <!-- more default parameters can be changed here -->
+    </include>
+</launch>
+```
+This is a standard launch file for our purposes here in Skyrats.
+
 ## SDF Files
 
 SDF (Simulation Description Format) files are used to describe models, worlds, and other elements in Gazebo simulations. They contain XML-based markup specifying the properties, geometry, and behavior of entities within the simulation.
