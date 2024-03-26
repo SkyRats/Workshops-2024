@@ -118,5 +118,46 @@ Now if we run in a terminal `roslaunch sky_sim sky_sim.launch`, we will see our 
 
 <figure><img src="assets/gazebo.png" alt="" width="563"><figcaption><p><em>Drone and our new palm tree from the gazebo_vegetation package</em></p></figcaption></figure>
 
+## Using a Plugin in Gazebo
 
-## Using a plug-in
+In this tutorial, we'll explore how to use a plugin in Gazebo simulation. We'll be using the ROS Gazebo Plugins. You can find more information about these plugins [here](https://classic.gazebosim.org/tutorials?tut=ros_gzplugins).
+
+### Using the Bumper Plugin
+
+First, let's assume we want to use the bumper plugin. You can find the relevant documentation for it [here](https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#BumperPlugin).
+
+### Modifying the Iris Base Copter Model
+
+Assuming we're modifying the `iris_base` model, let's add collision and sensor elements, as well as the plugin configuration:
+
+```xml
+<model name="iris_base">
+  <!-- Other model elements -->
+
+  <!-- Adding collision -->
+  <!--
+  <collision name="drone_collision">
+    <geometry>
+      <box>
+        <size>0.4 0.4 0.4</size>
+      </box>
+    </geometry>
+  </collision>
+  -->
+
+  <!-- Adding sensor -->
+  <!--
+  <sensor name='my_contact' type='contact'>
+    <contact>
+      <collision>drone_collision</collision>
+    </contact> 
+    <plugin name="drone_gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>${update_rate}</updateRate>
+      <bumperTopicName>drone_bumper</bumperTopicName>
+      <frameName>world</frameName>
+    </plugin>
+  </sensor>
+  -->
+</model>
+```
