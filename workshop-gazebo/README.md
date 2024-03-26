@@ -118,3 +118,5 @@ Now if we run in a terminal `roslaunch sky_sim sky_sim.launch`, we will see our 
 
 <figure><img src="assets/gazebo.png" alt="" width="563"><figcaption><p><em>Drone and our new palm tree from the gazebo_vegetation package</em></p></figcaption></figure>
 
+
+## Using a plug-in
