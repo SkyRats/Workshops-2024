@@ -51,6 +51,8 @@ For example, let's include a custom model called `palm_tree`:
   <!-- Indicate that gravity effects are turned off for this model -->
 </model>
 ```
+Now if we run in a terminal `roslaunch sky_sim sky_sim.launch`, we will see our new world:
+
 <figure><img src="assets/gazebo.png" alt="" width="563"><figcaption><p><em>Drone and our new palm tree from the gazebo_vegetation package</em></p></figcaption></figure>
 
 ## Creating Custom Launch Files
