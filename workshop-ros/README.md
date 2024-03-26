@@ -1,6 +1,8 @@
 ## Creating a Workspace
 
-At Sky, we have our own workspace, and therefore, this part of the workshop is important to keep a functional and organized working environment.
+At Sky, we have our own workspace, and therefore, this part of the workshop is important to keep a functional and organized working environment. **Follow the PDF to have access to the entire tutorial: 
+
+[ROS-Tutorial](https://drive.google.com/file/d/1hPJ5KaIv_nZbkx0sQt1-MnMCX08tJG2P/view?usp=sharing)
 
 First of all, let's learn how to create a workspace \[1\]. Firstly, we create a directory with a `src` folder and run the `catkin_init_workspace` command within the `src` folder. This will automatically generate a `CMake` file, which will be the top-level of the workspace:
 
