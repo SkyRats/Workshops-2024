@@ -1,3 +1,8 @@
+
+# How to Use This Workspace?
+
+Opt not to clone. Instead, build your workspace yourself. Compare the files that need changes (such as CMake). Write your scripts following the examples provided here and easily build them in your workspace.
+
 ## Creating a Workspace
 
 At Sky, we have our own workspace, and therefore, this part of the workshop is important to keep a functional and organized working environment. **Follow the PDF to have access to the entire tutorial**: 
