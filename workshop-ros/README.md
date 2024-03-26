@@ -6,15 +6,17 @@ At Sky, we have our own workspace, and therefore, this part of the workshop is i
 
 First of all, let's learn how to create a workspace \[1\]. Firstly, we create a directory with a `src` folder and run the `catkin_init_workspace` command within the `src` folder. This will automatically generate a `CMake` file, which will be the top-level of the workspace:
 
-<figure><img src="assets/Screenshot from 2023-10-25 02-43-22.png" alt="" width="563"><figcaption><p><em></em></p></figcaption></figure>
+<figure><img src="assets/workspace.png" alt="" width="563"><figcaption><p><em></em></p></figcaption></figure>
 
 After that, we can issue the \`catkin_make\` command (outside of the \`src\` folder) to compile the workspace. This will create the other two folders we've discussed (\`build\` and \`devel\`) with various files inside. Feel free to explore what's in each one.
 
-<figure><img src="assets/Screenshot from 2023-10-25 02-43-22.png" alt="" width="563"><figcaption><p><em></em></p></figcaption></figure>
+<figure><img src="assets/resultado.png" alt="" width="563"><figcaption><p><em></em></p></figcaption></figure>
 
 Every time we implement new features in our packages, we'll issue this command.
 
 Additionally, the `source [ws_name]/devel/setup.sh` command should also be executed. This will add appropriate environment variables without us having to do it manually. If you've already installed ROS, you've likely executed this `source` command with the directory where ROS is installed on your computer.
+
+<figure><img src="assets/source.png" alt="" width="563"><figcaption><p><em></em></p></figcaption></figure>
 
 ## Packages
 
