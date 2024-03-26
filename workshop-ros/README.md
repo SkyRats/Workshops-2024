@@ -18,7 +18,7 @@ Additionally, the `source [ws_name]/devel/setup.sh` command should also be execu
 
 ROS is organized into packages that can contain source code, `launch` files, message definitions, data, and documentation.
 
-As we've seen, our packages are located in the \`src\` folder of the workspace. Each package will have its own \`CMake\` files, but the `src` folder will have a main `CMake` file (Toplevel):
+As we've seen, our packages are located in the `src` folder of the workspace. Each package will have its own `CMake` files, but the `src` folder will have a main `CMake` file (Toplevel):
 
 ```bash
 workspace_folder/        ## WORKSPACE
@@ -33,9 +33,9 @@ workspace_folder/        ## WORKSPACE
       package.xml        ## Package manifest for package_n
 ```
 
-But what are these \`CMake\` files? Basically, they describe the compilation rules for what is being compiled. It's important to note that each package can also have its own \`src\` folder, as well as folders for \`services\` and \`messages\`.
+But what are these `CMake` files? Basically, they describe the compilation rules for what is being compiled. It's important to note that each package can also have its own `src` folder, as well as folders for `services` and `messages`.
 
-Furthermore, every package must have a \`package.xml\` file, which contains meta-information (name, version, description, license, dependencies, etc.).
+Furthermore, every package must have a `package.xml` file, which contains meta-information (name, version, description, license, dependencies, etc.).
 
 Now that we know how to create packages that can integrate with ROS and leverage its functionalities, let's learn how to make use of this ecosystem.
 
@@ -57,17 +57,17 @@ catkin_create_pkg ## Create package, run inside src folder
 
 For the next part of the workshop, we'll create an example workspace and package. For this, here's a summary of the important commands we'll use:
 
-\| **Command** \| **Usage** \|
-\|-------------\|-----------\|
-\| `roscd` | Change ROS working directory \|
-\| `rosrun` \| Run executable in an arbitrary package \|
-\| `roscore` \| Run ROS master and other prerequisites \|
-\| `rosnode` \| Display debug information about ROS nodes \|
-\| `roslaunch` \| Launch ROS nodes locally and remotely via SSH \|
-\| `roscp` \| Copy a file from one place to another \|
+| **Command** | **Usage** |
+|-------------|-----------|
+| `roscd` | Change ROS working directory |
+| `rosrun` | Run executable in an arbitrary package |
+| `roscore` | Run ROS master and other prerequisites |
+| `rosnode` | Display debug information about ROS nodes |
+| `roslaunch` | Launch ROS nodes locally and remotely via SSH |
+| `roscp` | Copy a file from one place to another |
 
 When in doubt, refer back to this table. During the workshop, it will become clearer when to use each one. We recommend some Cheat Sheets: 
 [ROS Cheat Sheet Noetic](https://gomarketing.ottomotors.com/l/92812/2023-03-22/92z4ql/92812/1679526697SkoPBmzi/ROS_Cheat_Sheet_Noetic.pdf) 
 [ROS Cheat Sheet](https://mirror.umd.edu/roswiki/attachments/de/ROScheatsheet.pdf).
 
-**Curiosity**: \`rosrun\` can only start one node at a time from a single package, while \`roslaunch\` can start two or more nodes simultaneously from various packages. \`roslaunch\` will automatically start roscore (if it's not already running), unlike \`rosrun\`. \`roslaunch\` uses launch files, which can automatically start other programs including other launch files, set some parameters, etc. \`rosrun\`, on the other hand, does not use launch files - it starts nodes directly.
+**Curiosity**: `rosrun` can only start one node at a time from a single package, while `roslaunch` can start two or more nodes simultaneously from various packages. `roslaunch` will automatically start roscore (if it's not already running), unlike `rosrun`. `roslaunch` uses launch files, which can automatically start other programs including other launch files, set some parameters, etc. `rosrun`, on the other hand, does not use launch files - it starts nodes directly.
