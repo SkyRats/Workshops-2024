@@ -135,7 +135,6 @@ Assuming we're modifying the `iris_base` model, let's add collision and sensor e
   <!-- Other model elements -->
 
   <!-- Adding collision -->
-  <!--
   <collision name="drone_collision">
     <geometry>
       <box>
@@ -143,10 +142,9 @@ Assuming we're modifying the `iris_base` model, let's add collision and sensor e
       </box>
     </geometry>
   </collision>
-  -->
 
   <!-- Adding sensor -->
-  <!--
+
   <sensor name='my_contact' type='contact'>
     <contact>
       <collision>drone_collision</collision>
@@ -158,6 +156,6 @@ Assuming we're modifying the `iris_base` model, let's add collision and sensor e
       <frameName>world</frameName>
     </plugin>
   </sensor>
-  -->
+
 </model>
 ```
